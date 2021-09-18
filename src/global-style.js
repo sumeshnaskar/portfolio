@@ -8,7 +8,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html, body{
+        font-family: 'Roboto', sans-serif;
         margin: 0;
         font-size: 16px;
+        height: 100vh;
     }
 `
