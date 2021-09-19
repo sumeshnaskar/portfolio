@@ -4,13 +4,8 @@ export const Container = styled.nav`
     padding: .5em;
     margin: 0; 
     box-shadow: 0px 1px 5px #333;
-
-    @media(min-width: 500px){
-        box-shadow: 5px 0px 5px #333;
-        height: 100vh;
-        position: fixed;
-    }
-    
+    position: fixed;
+    width: 100%;
 `
 export const LogoWrapper = styled.div`
     display: inline-block;
@@ -23,9 +18,8 @@ export const LogoWrapper = styled.div`
     font-size: 1.2rem;
 
     @media(min-width: 500px){
-        margin: 1em 0 1em;
+        margin-right: 1em;
     }
-
 `
 
 export const Group = styled.div`
@@ -34,14 +28,15 @@ export const Group = styled.div`
     align-items: center;
 
     @media(min-width: 500px){
-        flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
+        justify-content: space-between;
     }
     
 
 `
 export const Text = styled.p`
     margin: 0;
+
 
 `
 
@@ -92,7 +87,8 @@ export const List = styled.ul`
     @media(min-width: 500px){
         position: static;
         box-shadow: none;
-         
+        display: flex;
+    
     }
 `
 export const Item = styled.li`
@@ -101,7 +97,7 @@ export const Item = styled.li`
     padding: 1.5em;
     font-size: .8rem;
     cursor:pointer;
-    text-align: right;
+    text-align: left;
     border-bottom: 1px dashed;
     user-select: none;
 
@@ -118,12 +114,26 @@ export const Item = styled.li`
     @media(min-width: 500px){
         border: 0;
         padding: 0;
-        margin-top: 2em;
-        text-align: left;
+        text-align: center;
+        margin-right: 2em;
+        background: #605bf0;
+        font-weight: 700;
+        padding: 0.75em 1em .75em;
+        border-radius: 5px;
+        color: #fff;
+        
 
-        &:hover{
-            background: #fff;
-            color: #333;
+        &:first-of-type{
+            background: #db1616;
+        }
+        
+        &:last-of-type{
+            background: #16b816;
+        }
+
+        &:hover,focus{
+            background: #333;
+            color: #fff;
         }
     }
 
