@@ -1,61 +1,76 @@
 import styled from "styled-components"
 
-export const Container = styled.nav`
-    padding: .5em;
-    margin: 0; 
-    box-shadow: 0px 1px 5px #333;
 
-    @media(min-width: 500px){
-        box-shadow: 5px 0px 5px #333;
-        height: 100vh;
-        position: fixed;
-    }
+//Header container fixed on top
+export const Container = styled.nav`
+    padding: 1em;
+    margin: 0; 
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(51, 51, 51, .9);
     
+    @media(min-width: 700px){
+        width: 90%;
+    }
 `
-export const LogoWrapper = styled.div`
-    display: inline-block;
+
+//Logo 
+export const LogoWrapper = styled.div`  
     text-transform: uppercase;
-    color: #fff;
-    background: linear-gradient(45deg, #333,#333);
+    color: #333;
+    background: #fff;
     padding: 0.5em;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     user-select: none;
     font-size: 1.2rem;
-
+    font-weight: 700;
+    
     @media(min-width: 500px){
-        margin: 1em 0 1em;
-    }
+        margin-right: 1em;
 
+    }
 `
 
+//Group 
 export const Group = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @media(min-width: 500px){
-        flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
+        justify-content: space-between;
     }
-    
-
 `
+
+//Text
 export const Text = styled.p`
     margin: 0;
-
+    padding: .5em 0;
+    font-size: .85rem;
+    letter-spacing: 1.25px;
+    color: #fff;
+    user-select: none;
 `
 
+export const Wrapper = styled.div`
+    padding: 8px 0;
+    cursor: pointer;
+`
+//hamburger menu
 export const Hamburger = styled.span`
     display: block;
     position: relative;
     width: 2em;
     height: 5px;
-    background-color: black;
-    margin-right: 1.5em;
+    background-color: #fff; 
 
     &:before,&:after{
         content: '';
-        background-color: black;
+        background-color: #fff;
         width: 2em;
         height: 5px;
         content: '';
@@ -79,10 +94,11 @@ export const Hamburger = styled.span`
     }
 `
 
+//unordered list
 export const List = styled.ul`
     position: absolute;
     top: 3em;
-    right: 2em;
+    right: 1em;
     background-color: #fff;
     margin: 0;
     list-style-type: none;
@@ -92,25 +108,30 @@ export const List = styled.ul`
     @media(min-width: 500px){
         position: static;
         box-shadow: none;
-         
+        display: flex;
+        background-color: rgba(51, 51, 51, 0);
     }
 `
+
+//list items
 export const Item = styled.li`
     color: #333;
     text-transform: uppercase;
     padding: 1.5em;
     font-size: .8rem;
-    cursor:pointer;
-    text-align: right;
+    cursor: pointer;
+    text-align: left;
     border-bottom: 1px dashed;
     user-select: none;
+    display: ${({ display}) => display};
+    letter-spacing: 5px;
 
     &:last-of-type{
         border: none;
     }
 
     &:hover{
-        background: #333;
+        background-color: rgba(51, 51, 51, 1);
         color: #fff;
         font-weight: 700;
     }
@@ -118,12 +139,23 @@ export const Item = styled.li`
     @media(min-width: 500px){
         border: 0;
         padding: 0;
-        margin-top: 2em;
-        text-align: left;
+        text-align: center;
+        margin-right: 2em;
+        background-color: rgba(51, 51, 51, 0);
+        font-weight: 400;
+        padding: 0em 1em;
+        border-radius: 5px;
+        color: #fff;
+        letter-spacing: 3px;
+        display: block;
+        &:last-of-type{
+            margin-right: 0;
+        }
 
         &:hover{
-            background: #fff;
-            color: #333;
+            font-weight: 400;
+            transform: scale(1.1,1.1);   
+            background-color: rgba(51, 51, 51, 0);  
         }
     }
 
