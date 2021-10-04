@@ -10,6 +10,7 @@ export const Container = styled.nav`
     right: 0;
     width: 100%;
     margin: 0 auto;
+    background-color: rgba(51, 51, 51, .9);
     
     @media(min-width: 700px){
         width: 90%;
@@ -53,6 +54,11 @@ export const Text = styled.p`
     letter-spacing: 1.25px;
     color: #fff;
     user-select: none;
+`
+
+export const Wrapper = styled.div`
+    padding: 8px 0;
+    cursor: pointer;
 `
 //hamburger menu
 export const Hamburger = styled.span`
@@ -103,7 +109,7 @@ export const List = styled.ul`
         position: static;
         box-shadow: none;
         display: flex;
-        background-color: #333;
+        background-color: rgba(51, 51, 51, 0);
     }
 `
 
@@ -117,13 +123,15 @@ export const Item = styled.li`
     text-align: left;
     border-bottom: 1px dashed;
     user-select: none;
+    display: ${({ display}) => display};
+    letter-spacing: 5px;
 
     &:last-of-type{
         border: none;
     }
 
     &:hover{
-        background: #333;
+        background-color: rgba(51, 51, 51, 1);
         color: #fff;
         font-weight: 700;
     }
@@ -133,20 +141,21 @@ export const Item = styled.li`
         padding: 0;
         text-align: center;
         margin-right: 2em;
-        background: #333 ;
+        background-color: rgba(51, 51, 51, 0);
         font-weight: 400;
         padding: 0em 1em;
         border-radius: 5px;
         color: #fff;
         letter-spacing: 3px;
-        
+        display: block;
         &:last-of-type{
             margin-right: 0;
         }
 
-        &:hover,&:focus{
+        &:hover{
             font-weight: 400;
-            transform: scale(1.1,1.1);     
+            transform: scale(1.1,1.1);   
+            background-color: rgba(51, 51, 51, 0);  
         }
     }
 
