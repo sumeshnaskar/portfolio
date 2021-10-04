@@ -1,27 +1,39 @@
 import styled from "styled-components"
 
-export const Container = styled.nav`
-    padding: .5em;
-    margin: 0; 
-    box-shadow: 0px 1px 5px #333;
-    position: fixed;
-    width: 100%;
-`
-export const LogoWrapper = styled.div`
-    display: inline-block;
-    text-transform: uppercase;
-    color: #fff;
-    background: linear-gradient(45deg, #333,#333);
-    padding: 0.5em;
-    letter-spacing: 3px;
-    user-select: none;
-    font-size: 1.2rem;
 
-    @media(min-width: 500px){
-        margin-right: 1em;
+//Header container fixed on top
+export const Container = styled.nav`
+    padding: 1em;
+    margin: 0; 
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media(min-width: 700px){
+        width: 90%;
     }
 `
 
+//Logo 
+export const LogoWrapper = styled.div`  
+    text-transform: uppercase;
+    color: #333;
+    background: #fff;
+    padding: 0.5em;
+    letter-spacing: 5px;
+    user-select: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    
+    @media(min-width: 500px){
+        margin-right: 1em;
+
+    }
+`
+
+//Group 
 export const Group = styled.div`
     display: flex;
     justify-content: space-between;
@@ -31,26 +43,28 @@ export const Group = styled.div`
         align-items: flex-end;
         justify-content: space-between;
     }
-    
-
 `
+
+//Text
 export const Text = styled.p`
     margin: 0;
-
-
+    padding: .5em 0;
+    font-size: .85rem;
+    letter-spacing: 1.25px;
+    color: #fff;
+    user-select: none;
 `
-
+//hamburger menu
 export const Hamburger = styled.span`
     display: block;
     position: relative;
     width: 2em;
     height: 5px;
-    background-color: black;
-    margin-right: 1.5em;
+    background-color: #fff; 
 
     &:before,&:after{
         content: '';
-        background-color: black;
+        background-color: #fff;
         width: 2em;
         height: 5px;
         content: '';
@@ -74,10 +88,11 @@ export const Hamburger = styled.span`
     }
 `
 
+//unordered list
 export const List = styled.ul`
     position: absolute;
     top: 3em;
-    right: 2em;
+    right: 1em;
     background-color: #fff;
     margin: 0;
     list-style-type: none;
@@ -88,15 +103,17 @@ export const List = styled.ul`
         position: static;
         box-shadow: none;
         display: flex;
-    
+        background-color: #333;
     }
 `
+
+//list items
 export const Item = styled.li`
     color: #333;
     text-transform: uppercase;
     padding: 1.5em;
     font-size: .8rem;
-    cursor:pointer;
+    cursor: pointer;
     text-align: left;
     border-bottom: 1px dashed;
     user-select: none;
@@ -116,24 +133,20 @@ export const Item = styled.li`
         padding: 0;
         text-align: center;
         margin-right: 2em;
-        background: #605bf0;
-        font-weight: 700;
-        padding: 0.75em 1em .75em;
+        background: #333 ;
+        font-weight: 400;
+        padding: 0em 1em;
         border-radius: 5px;
         color: #fff;
-        
-
-        &:first-of-type{
-            background: #db1616;
-        }
+        letter-spacing: 3px;
         
         &:last-of-type{
-            background: #16b816;
+            margin-right: 0;
         }
 
-        &:hover,focus{
-            background: #333;
-            color: #fff;
+        &:hover,&:focus{
+            font-weight: 400;
+            transform: scale(1.1,1.1);     
         }
     }
 

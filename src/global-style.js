@@ -8,10 +8,10 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html, body{
-        
+        background-color: #333;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         font-size: 16px;
-        height: 100vh;
+        height: 200vh;
     }
 `
