@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Container, Title, Text } from './styles/intro'
+import { Container, Title, Text, Arrow } from './styles/intro'
 
 export default function Intro({ children, ...restProps }){
     return <Container {...restProps}>{children}</Container>
@@ -12,4 +12,8 @@ Intro.Title = function IntroTitle({ children, ...restProps }){
 
 Intro.Text = function IntroText({ children, ...restProps }){
     return <Text {...restProps}>{children}</Text>
+}
+
+Intro.Arrow = function IntroArrow({ ...restProps }){
+    return <Arrow {...restProps}/>
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { HeaderContainer } from './container/header'
 import { IntroContainer } from './container/intro'
+import { ProjectContainer } from './container/project'
 
 import { GlobalStyle } from './global-style'
 
@@ -11,6 +12,7 @@ export default function App() {
       <GlobalStyle/>
       <HeaderContainer/>
       <IntroContainer/>
+      <ProjectContainer/>
     </>
   )
 }
