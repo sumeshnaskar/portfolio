@@ -7,7 +7,7 @@ export function HeaderContainer(){
         <> 
             <Header>   
                 <Header.Group>
-                    <Header.Logo>Sumesh</Header.Logo>
+                    <Header.Logo>Portfolio</Header.Logo>
                     <Header.Hamburger />
                     <Header.List>
                             <Header.Item>Project</Header.Item>

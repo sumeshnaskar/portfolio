@@ -8,10 +8,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html, body{
-        background-color: #333;
+        background-color: #111;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         font-size: 16px;
-        height: 200vh;
+        height: 100vh;
+        scroll-behavior: smooth;
     }
 `

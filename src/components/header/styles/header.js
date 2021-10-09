@@ -10,10 +10,11 @@ export const Container = styled.nav`
     right: 0;
     width: 100%;
     margin: 0 auto;
-    background-color: rgba(51, 51, 51, .9);
+    background-color: rgba(17, 17, 17, .5);
     
     @media(min-width: 700px){
-        width: 90%;
+        width: 95%;
+        padding: 1em 4em; 
     }
 `
 
@@ -30,11 +31,10 @@ export const LogoWrapper = styled.div`
     
     @media(min-width: 500px){
         margin-right: 1em;
-
     }
 `
 
-//Group 
+//Grouping of logo and menu items 
 export const Group = styled.div`
     display: flex;
     justify-content: space-between;
@@ -46,13 +46,14 @@ export const Group = styled.div`
     }
 `
 
-//Text
+//Text below logo
 export const Text = styled.p`
     margin: 0;
     padding: .5em 0;
     font-size: .85rem;
-    letter-spacing: 1.25px;
+    letter-spacing: 3.9px;
     color: #fff;
+    opacity: .3;
     user-select: none;
 `
 
@@ -113,7 +114,7 @@ export const List = styled.ul`
     }
 `
 
-//list items
+//list items in the menu
 export const Item = styled.li`
     color: #333;
     text-transform: uppercase;
@@ -150,6 +151,7 @@ export const Item = styled.li`
         display: block;
         &:last-of-type{
             margin-right: 0;
+            padding-right: 0;
         }
 
         &:hover{
