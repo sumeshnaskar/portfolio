@@ -5,6 +5,8 @@ export const Container = styled.section`
     padding: 1em;
     min-width: 280px;
     user-select: none;
+    display: flex;
+    flex-direction: column;
 
     @media(min-width: 700px){
         padding: 4em;
@@ -14,24 +16,27 @@ export const Container = styled.section`
 export const Inner = styled.div`
     display: flex;
     flex-direction: column-reverse; 
+    background-image: url(${({image}) => image}), linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9));
+    background-blend-mode: overlay;
+    background-size: cover;
+    border-radius: 0 25px 0 25px;
 
     @media(min-width: 700px){
         flex-direction: row;
-        
-        
-
     }
+
 `
 export const Group = styled.div`
     width: 100%;
     padding: .5em;
     border-radius: 0 25px 0 0;
+    background: linear-gradient(45deg, rgba(255,255,255,1), rgba(15,15,15,.1));
     @media(min-width: 700px){
         padding: 2em;
     }
 `
 export const Title = styled.h2`
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin: 0;
     text-align: center;
     letter-spacing: 1px;
@@ -39,7 +44,7 @@ export const Title = styled.h2`
 
     @media(min-width: 700px){
         text-align: left;
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 `
 export const Description = styled.p`
@@ -47,7 +52,7 @@ export const Description = styled.p`
     margin: .5em 0 .25em;
     text-align: center;
     letter-spacing: 1px;
-    color: #333;
+    color: #111;
 
     @media(min-width: 700px){
         text-align: left;
@@ -56,12 +61,16 @@ export const Description = styled.p`
 `
 export const Image = styled.img`
     max-width: 100%;
-    object-fit: contain;
-    object-position: bottom;
-    max-height: 100vh;
+    object-fit: cover;
+    object-position:  top;
+    background: linear-gradient(45deg, rgba(255,255,255,.004), rgba(255,255,255,.1));
     cursor: pointer;
     border: none;
     border-radius: 0 0 0 25px;
+
+    @media(min-width: 700px){
+        width: 400px;
+    }
     &:hover{
         opacity: .8;
     }
