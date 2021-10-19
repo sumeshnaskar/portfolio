@@ -26,7 +26,7 @@ export function ProjectContainer(){
                     Next
                 </Project.Button> }              
             </Project.Wrapper>
-            <input style={{width: '0px', outline: 'none', border: "none", cursor: "pointer", caretColor: "transparent"}} ref={focusRef}/>
+            <input style={{width: '0px', height: '0px', outline: 'none', border: "none", cursor: "pointer", caretColor: "transparent"}} ref={focusRef}/>
            {projectData.map( (project, index) => (
                index === displayProject &&
                
