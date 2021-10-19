@@ -95,8 +95,8 @@ export const Button = styled.button`
     align-self: center;
     letter-spacing: 1px;
     border-radius: 50px;
-    &: first-of-type{
-        margin-right: 1em;
+    &: last-of-type{
+        margin-left: .5em;
         
     }
     
@@ -107,10 +107,6 @@ export const Button = styled.button`
 
     @media(min-width: 700px){
         font-size: 1.25rem;
-
-        &: first-of-type{           
-            margin-right: .5em;
-        }
     }
 `
 
