@@ -14,9 +14,10 @@ export const Container = styled.section`
     
 `
 export const Inner = styled.div`
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 2px;
     display: flex;
     flex-direction: column-reverse; 
-    background-image: url(${({image}) => image}), linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9));
+    background-image: url(${({image}) => image}), linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0));
     background-blend-mode: overlay;
     background-size: cover;
     border-radius: 0 25px 0 25px;
@@ -30,7 +31,7 @@ export const Group = styled.div`
     width: 100%;
     padding: .5em;
     border-radius: 0 25px 0 0;
-    background: linear-gradient(45deg, rgba(255,255,255,1), rgba(15,15,15,.1));
+    background: linear-gradient(225deg, rgba(0,0,0,1) ,rgba(0,0,0,.75));
     @media(min-width: 700px){
         padding: 2em;
     }
@@ -40,7 +41,8 @@ export const Title = styled.h2`
     margin: 0;
     text-align: center;
     letter-spacing: 1px;
-    color: #111;
+    color: #fff;
+    font-weight: 700;
 
     @media(min-width: 700px){
         text-align: left;
@@ -52,7 +54,8 @@ export const Description = styled.p`
     margin: .5em 0 .25em;
     text-align: center;
     letter-spacing: 1px;
-    color: #111;
+    color: #fff;
+    font-weight: 700;
 
     @media(min-width: 700px){
         text-align: left;
@@ -87,7 +90,7 @@ export const Button = styled.button`
     color: #111;
     cursor: pointer;
     background-color: #fff;
-    margin-top: .5em;
+    margin: .5em 0;
     border: 2px solid #111;
     align-self: center;
     letter-spacing: 1px;
