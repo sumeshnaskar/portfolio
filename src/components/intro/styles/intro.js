@@ -2,10 +2,10 @@ import styled, {keyframes} from "styled-components"
 
 export const Container = styled.section`
     margin: 0;
-    border: 1px solid #111;
     top: 1em;
     min-width: 280px;
     height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 `
@@ -32,15 +32,15 @@ export const Title = styled.h1`
     }
 
 `
+
 export const Text = styled.p`
-    color: #fff;
     margin: 0 auto;
     text-align: center;
     margin-top: 0;
     padding: .5em 1em;
     color: #fff;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     letter-spacing: 5px;
 
     @media(min-width: 700px){

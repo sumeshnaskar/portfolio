@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, {keyframes} from "styled-components"
 
 export const Container = styled.section`
     background-color: #fff;
@@ -13,6 +13,12 @@ export const Container = styled.section`
     }
     
 `
+
+const slide = keyframes`
+    0%{ left: 25em}
+    100%{ left: 0; }
+`
+
 export const Inner = styled.div`
     box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 2px;
     display: flex;
@@ -21,6 +27,10 @@ export const Inner = styled.div`
     background-blend-mode: overlay;
     background-size: cover;
     border-radius: 0 25px 0 25px;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    right: 0;
 
     @media(min-width: 700px){
         flex-direction: row;
@@ -32,6 +42,9 @@ export const Group = styled.div`
     padding: .5em;
     border-radius: 0 25px 0 0;
     background: linear-gradient(225deg, rgba(0,0,0,1) ,rgba(0,0,0,.75));
+    position: relative;
+    overflow: hidden;
+    animation: ${slide} 1.12s forwards;
     @media(min-width: 700px){
         padding: 2em;
     }
@@ -62,6 +75,7 @@ export const Description = styled.p`
         font-size: 1.5rem;
     }
 `
+
 export const Image = styled.img`
     max-width: 100%;
     object-fit: cover;
@@ -70,12 +84,12 @@ export const Image = styled.img`
     cursor: pointer;
     border: none;
     border-radius: 0 0 0 25px;
-
+    transition: transform .5s;
     @media(min-width: 700px){
         width: 400px;
     }
     &:hover{
-        opacity: .8;
+        transform: scale(1.1);
     }
     
     

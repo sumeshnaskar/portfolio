@@ -14,5 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         height: 100vh;
         scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased; 
+        -moz-osx-font-smoothing: grayscale;
     }
 `
