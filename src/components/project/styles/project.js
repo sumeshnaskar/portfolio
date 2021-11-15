@@ -44,7 +44,7 @@ export const Group = styled.div`
     background: linear-gradient(225deg, rgba(0,0,0,1) ,rgba(0,0,0,.75));
     position: relative;
     overflow: hidden;
-    animation: ${slide} 1.12s forwards;
+    animation: ${slide} .8s forwards;
     @media(min-width: 700px){
         padding: 2em;
     }
@@ -76,6 +76,16 @@ export const Description = styled.p`
     }
 `
 
+const zoomout = keyframes`
+    0%{ transform: scale(1.6)}
+    100%{ transform: scale(1) }
+`
+
+const zoomin = keyframes`
+    0%{ transform: scale(.6)}
+    100%{ transform: scale(1) }
+`
+
 export const Image = styled.img`
     max-width: 100%;
     object-fit: cover;
@@ -85,8 +95,11 @@ export const Image = styled.img`
     border: none;
     border-radius: 0 0 0 25px;
     transition: transform .5s;
+    animation: ${zoomout} 1.12s forwards;
+
     @media(min-width: 700px){
         width: 400px;
+        animation: ${zoomin} .6s forwards;
     }
     &:hover{
         transform: scale(1.1);
