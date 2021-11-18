@@ -1,15 +1,15 @@
 import styled, {keyframes} from "styled-components"
 
 export const Container = styled.section`
-    background-color: #fff;
+    background: linear-gradient(#111, #fff);
     padding: 1em;
     min-width: 280px;
     user-select: none;
     display: flex;
     flex-direction: column;
-
     @media(min-width: 700px){
         padding: 4em;
+        padding-bottom: 0;
     }
     
 `
@@ -76,16 +76,6 @@ export const Description = styled.p`
     }
 `
 
-const zoomout = keyframes`
-    0%{ transform: scale(1.6)}
-    100%{ transform: scale(1) }
-`
-
-const zoomin = keyframes`
-    0%{ transform: scale(.6)}
-    100%{ transform: scale(1) }
-`
-
 export const Image = styled.img`
     max-width: 100%;
     object-fit: cover;
@@ -95,11 +85,13 @@ export const Image = styled.img`
     border: none;
     border-radius: 0 0 0 25px;
     transition: transform .5s;
-    animation: ${zoomout} 1.12s forwards;
+    position: relative;
+    overflow: hidden;
+    animation: ${slide} .8s forwards;
 
     @media(min-width: 700px){
         width: 400px;
-        animation: ${zoomin} .6s forwards;
+        
     }
     &:hover{
         transform: scale(1.1);
@@ -118,10 +110,10 @@ export const Button = styled.button`
     cursor: pointer;
     background-color: #fff;
     margin: .5em 0;
-    border: 2px solid #111;
     align-self: center;
     letter-spacing: 1px;
     border-radius: 50px;
+    
     &: last-of-type{
         margin-left: .5em;
         

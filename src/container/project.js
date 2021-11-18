@@ -3,6 +3,10 @@ import React, {useState, useEffect, useRef} from 'react'
 import { Project,Intro } from '../components'
 import projectData  from '../helper/images.json'
 
+const style = {
+    backgroundColor: "#111", color: "#fff", borderRadius: "0", border: "1.5px solid #fff"
+}
+
 export function ProjectContainer(){
     const [ displayProject, setDisplayProject ] = useState(0)
     let focusRef = useRef()
@@ -17,16 +21,33 @@ export function ProjectContainer(){
         <Project >
             <Project.Wrapper style = {{justifyContent: "flex-end"}}>
                 {displayProject > 0 &&
-                <Project.Button onClick = { () => {focusRef.current.focus() 
-                setDisplayProject(displayProject - 1)}} style = {{backgroundColor: "#111", color: "#fff", borderRadius: "0" }}>
+                <Project.Button 
+                    onClick = { () => setDisplayProject(displayProject - 1)} 
+                    style = {style}
+                >
                     Prev
                 </Project.Button>}
                 { displayProject < projectData.length - 1  && 
-                <Project.Button onClick = { () => setDisplayProject(displayProject + 1)} style = {{backgroundColor: "#111", color: "#fff", borderRadius: "0"}}>
+                <Project.Button 
+                    onClick = { () => setDisplayProject(displayProject + 1)} 
+                    style = {style}
+                >
                     Next
                 </Project.Button> }              
             </Project.Wrapper>
-            <input style={{width: '0px', height: '0px', outline: 'none', border: "none", cursor: "pointer", caretColor: "transparent"}} ref={focusRef}/>
+            <input 
+                style =
+                    {{
+                        width: '0px', 
+                        height: '0px', 
+                        backgroundColor: 'rgba(0, 0, 0, 0.45)', 
+                        outline: 'none', 
+                        border: "none", 
+                        cursor: "pointer", 
+                        caretColor: "transparent"
+                    }} 
+                    ref={focusRef}
+            />
            {projectData.map( (project, index) => (
                index === displayProject &&
                
@@ -46,12 +67,17 @@ export function ProjectContainer(){
            ))}
             <Project.Wrapper style = {{justifyContent: "flex-end"}}>
                 {displayProject > 0 &&
-                <Project.Button onClick = { () => {focusRef.current.focus() 
-                setDisplayProject(displayProject - 1)}} style = {{backgroundColor: "#111", color: "#fff", borderRadius: "0" }}>
+                <Project.Button 
+                    onClick = { () => setDisplayProject(displayProject - 1)} 
+                    style = {style}
+                >
                     Prev
                 </Project.Button>}
                 { displayProject < projectData.length - 1  && 
-                <Project.Button onClick = { () => setDisplayProject(displayProject + 1)} style = {{backgroundColor: "#111", color: "#fff", borderRadius: "0"}}>
+                <Project.Button 
+                    onClick = { () => setDisplayProject(displayProject + 1)} 
+                    style = {style}
+                >
                     Next
                 </Project.Button> }              
             </Project.Wrapper> 
