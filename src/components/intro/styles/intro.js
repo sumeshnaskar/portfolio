@@ -2,12 +2,11 @@ import styled, {keyframes} from "styled-components"
 
 export const Container = styled.section`
     margin: 0;
-    border: 1px solid #111;
     top: 1em;
     min-width: 280px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    
 `
 export const Title = styled.h1`
     margin: 0 auto;
@@ -28,19 +27,19 @@ export const Title = styled.h1`
 
     @media(min-width: 700px){
         width: 80%;
-        margin-top: 45vh;
+        margin-top: 35vh;
     }
 
 `
+
 export const Text = styled.p`
-    color: #fff;
     margin: 0 auto;
     text-align: center;
     margin-top: 0;
     padding: .5em 1em;
     color: #fff;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     letter-spacing: 5px;
 
     @media(min-width: 700px){
@@ -74,4 +73,17 @@ export const Arrow = styled.div`
         border-image-slice: 1;   
     }
 
+`
+
+export const Button = styled(Text)`
+    background: red;
+    cursor: pointer;
+    border: 5px solid #111;
+
+    &:hover{
+        background: linear-gradient(90deg, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        border: 5px solid #fff;
+    }
 `

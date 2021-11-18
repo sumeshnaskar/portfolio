@@ -1,4 +1,5 @@
 import React from 'react'
+import { AboutContainer } from './container/about'
 import { HeaderContainer } from './container/header'
 import { IntroContainer } from './container/intro'
 import { ProjectContainer } from './container/project'
@@ -13,6 +14,7 @@ export default function App() {
       <HeaderContainer/>
       <IntroContainer/>
       <ProjectContainer/>
+      <AboutContainer/>
     </>
   )
 }

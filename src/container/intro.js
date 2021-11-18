@@ -7,8 +7,9 @@ export function IntroContainer(){
         <Intro>
             <Intro.Title>Hi! I am Sumesh Naskar</Intro.Title>
             <Intro.Text>Front-end developer</Intro.Text>
+            <Intro.Button>Resumé</Intro.Button>
             <Intro.Arrow/>
-            <Intro.Text>Projects</Intro.Text>
+            <Intro.Text>Project</Intro.Text>
         </Intro>
     )
 }

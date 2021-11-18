@@ -6,6 +6,7 @@ export const Container = styled.nav`
     padding: 1em;
     margin: 0; 
     position: fixed;
+    z-index: 999;
     left: 0;
     right: 0;
     width: 100%;
@@ -15,6 +16,7 @@ export const Container = styled.nav`
     @media(min-width: 700px){
         width: 95%;
         padding: 1em 4em; 
+        
     }
 `
 
@@ -68,6 +70,7 @@ export const Hamburger = styled.span`
     width: 2em;
     height: 5px;
     background-color: #fff; 
+    transition: transform scale(1);
 
     &:before,&:after{
         content: '';
@@ -98,14 +101,14 @@ export const Hamburger = styled.span`
 //unordered list
 export const List = styled.ul`
     position: absolute;
-    top: 3em;
+    top: 5em;
     right: 1em;
     background-color: #fff;
     margin: 0;
     list-style-type: none;
     padding: 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
+    
     @media(min-width: 500px){
         position: static;
         box-shadow: none;
@@ -126,9 +129,12 @@ export const Item = styled.li`
     user-select: none;
     display: ${({ display}) => display};
     letter-spacing: 5px;
-
+    background-color: rgba(51, 51, 51, 0);
     &:last-of-type{
         border: none;
+    }
+    &:first-of-type{
+        margin-top: 2em;
     }
 
     &:hover{
@@ -142,22 +148,24 @@ export const Item = styled.li`
         padding: 0;
         text-align: center;
         margin-right: 2em;
-        background-color: rgba(51, 51, 51, 0);
-        font-weight: 400;
+        margin-top: 2em;
         padding: 0em 1em;
         border-radius: 5px;
         color: #fff;
         letter-spacing: 3px;
         display: block;
+        font-weight: 700;
+        
         &:last-of-type{
             margin-right: 0;
             padding-right: 0;
         }
 
-        &:hover{
-            font-weight: 400;
-            transform: scale(1.1,1.1);   
-            background-color: rgba(51, 51, 51, 0);  
+        &:hover{ 
+            background: linear-gradient(90deg, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            font-weight: 700;
         }
     }
 

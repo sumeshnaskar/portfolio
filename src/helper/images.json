@@ -1,5 +1,10 @@
 [
     {
+        "title": "Ecommerce",
+        "description": "This is project description.",
+        "image": "images/ecommerce-image.png"
+    },
+    {
         "title": "Shortly",
         "description": "This is project description.",
         "image": "images/shorturl-image.png"
