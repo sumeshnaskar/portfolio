@@ -10,6 +10,7 @@ export const Container = styled.section`
     @media(min-width: 700px){
         padding: 4em;
         padding-bottom: 0;
+        padding-top: 0;
     }
     
 `
@@ -20,6 +21,7 @@ const slide = keyframes`
 `
 
 export const Inner = styled.div`
+
     box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 2px;
     display: flex;
     flex-direction: column-reverse; 
@@ -31,7 +33,7 @@ export const Inner = styled.div`
     overflow: hidden;
     left: 0;
     right: 0;
-
+    border: 5px solid #fff;
     @media(min-width: 700px){
         flex-direction: row;
     }

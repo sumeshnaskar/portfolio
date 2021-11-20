@@ -1,5 +1,5 @@
 import React from 'react'
-import { About } from '../components'
+import { About, Intro } from '../components'
 
 export function AboutContainer(){
     return (
@@ -10,6 +10,8 @@ export function AboutContainer(){
                 and since then, I have been looking for ways to showcase my abilities. 
                 The projects in my portfolio and this website are all created using React. 
             </About.Text>
+            <Intro.Arrow/>
+            <Intro.Text style ={{ color: "#111"}}>Contact</Intro.Text>
         </About>
     )
 }

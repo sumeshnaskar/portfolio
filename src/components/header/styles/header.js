@@ -11,7 +11,7 @@ export const Container = styled.nav`
     right: 0;
     width: 100%;
     margin: 0 auto;
-    background-color: rgba(17, 17, 17, .5);
+    background-color: rgba(17, 17, 17, .9);
     
     @media(min-width: 700px){
         width: 95%;
@@ -155,6 +155,7 @@ export const Item = styled.li`
         letter-spacing: 3px;
         display: block;
         font-weight: 700;
+        transition: transform .2s;
         
         &:last-of-type{
             margin-right: 0;
@@ -166,6 +167,7 @@ export const Item = styled.li`
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; 
             font-weight: 700;
+            transform: scale(1.5);
         }
     }
 
