@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
-
+import { Element } from 'react-scroll'
 import { Project,Intro } from '../components'
 import projectData  from '../helper/images.json'
 
@@ -81,6 +81,7 @@ export function ProjectContainer(){
                     Next
                 </Project.Button> }              
             </Project.Wrapper> 
+            <Element id='about'/>
             <Intro.Arrow/>
             <Intro.Text style ={{ color: "#111"}}>About</Intro.Text>
         </Project>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Element } from 'react-scroll'
 import { About, Intro } from '../components'
 
 export function AboutContainer(){
@@ -10,8 +11,10 @@ export function AboutContainer(){
                 and since then, I have been looking for ways to showcase my abilities. 
                 The projects in my portfolio and this website are all created using React. 
             </About.Text>
+            <Element id='contact'/>
             <Intro.Arrow/>
             <Intro.Text style ={{ color: "#111"}}>Contact</Intro.Text>
+            <About.Text>sumeshnaskar27@gmail.com</About.Text>
         </About>
     )
 }

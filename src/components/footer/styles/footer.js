@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-    background: #fff;
-    padding-bottom: 4em;
+    background: #111;
+    padding: 2em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,4 +18,9 @@ export const Image = styled.img`
     width: 30px;
     margin: .5em;
     cursor: pointer;
+    transition: transform .2s;
+
+    &:hover{
+        transform: scale(1.4);
+    }
 `
