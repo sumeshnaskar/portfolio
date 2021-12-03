@@ -101,7 +101,7 @@ export const Image = styled.img`
     
     
 `
-export const Button = styled.button`
+export const Button = styled.a`
     margin: 0;
     border: 0;
     padding: .75em 1.25em;
@@ -115,6 +115,7 @@ export const Button = styled.button`
     align-self: center;
     letter-spacing: 1px;
     border-radius: 50px;
+    text-decoration: none;
     
     &: last-of-type{
         margin-left: .5em;

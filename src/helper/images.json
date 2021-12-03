@@ -2,27 +2,37 @@
     {
         "title": "Ecommerce",
         "description": "This is project description.",
-        "image": "images/ecommerce-image.png"
+        "image": "images/ecommerce-image.png",
+        "live": "https://sumeshnaskar.github.io/ecommerce",
+        "github": "https://github.com/sumeshnaskar/ecommerce"
     },
     {
         "title": "Shortly",
         "description": "This is project description.",
-        "image": "images/shorturl-image.png"
+        "image": "images/shorturl-image.png",
+        "live": "https://sumeshnaskar.github.io/shorturl",
+        "github": "https://github.com/sumeshnaskar/shorturl"
     },
     {
         "title": "Netflix-Clone",
         "description": "This is project description.",
-        "image": "images/netflix-clone-image.png"
+        "image": "images/netflix-clone-image.png",
+        "live": "https://sumeshnaskar.github.io/netflix-clone/",
+        "github": "https://github.com/sumeshnaskar/netflix-clone"
     },
     {
         "title": "Rock Paper Scissors",
         "description": "This is project description.",
-        "image": "images/rock-paper-scissors-image.png"
+        "image": "images/rock-paper-scissors-image.png",
+        "live": "https://sumeshnaskar.github.io/rock-paper-scissors/",
+        "github": "https://github.com/sumeshnaskar/rock-paper-scissors"
     },
     {
         "title": "Tic Tac Toe",
         "description": "This is project description.",
-        "image": "images/tic-tac-toe-image.png"
+        "image": "images/tic-tac-toe-image.png",
+        "live": "https://sumeshnaskar.github.io/tic-tac-toe-with-react-hooks",
+        "github": "https://github.com/sumeshnaskar/tic-tac-toe-with-react-hooks"
     }
 
 ]

@@ -86,6 +86,6 @@ export const Button = styled(Text)`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; 
         border: 5px solid #fff;
-        transform: scale(1.12);
+        transform: scale(1.09);
     }
 `

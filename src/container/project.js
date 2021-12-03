@@ -56,8 +56,8 @@ export function ProjectContainer(){
                     <Project.Group>
                         <Project.Title>{project.title}</Project.Title>
                         <Project.Wrapper>
-                            <Project.Button>Live</Project.Button>
-                            <Project.Button>Github</Project.Button>
+                            <Project.Button href = {project.live}>Live</Project.Button>
+                            <Project.Button href = {project.github}>Github</Project.Button>
                         </Project.Wrapper>
                         <Project.Description>
                             {project.description}
