@@ -23,25 +23,24 @@ export const Container = styled.nav`
 //Logo 
 export const LogoWrapper = styled.div`  
     text-transform: uppercase;
-    color: #333;
-    background: #fff;
+
     padding: 0.5em;
     letter-spacing: 5px;
     user-select: none;
     font-size: 1.2rem;
     font-weight: 700;
     cursor: pointer;
+    transition: transform .2s;
+    background: linear-gradient(90deg, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
     
     @media(min-width: 500px){
         margin-right: 1em;
     }
 
     &:hover{
-        background-image: linear-gradient(45deg, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
-        -webkit-background-clip: background;
-        -webkit-background-fill-color: transparent; 
-        background-image-slice: 1;
-        color: #fff;
+        transform: scale(1.25);
     }
 `
 
@@ -60,7 +59,7 @@ export const Group = styled.div`
 //Text below logo
 export const Text = styled.p`
     margin: 0;
-    padding: .5em 0;
+    padding: 0;
     font-size: .85rem;
     letter-spacing: 3.9px;
     color: #fff;

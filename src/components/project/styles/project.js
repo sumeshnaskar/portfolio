@@ -83,7 +83,6 @@ export const Image = styled.img`
     object-fit: cover;
     object-position:  top;
     background: linear-gradient(45deg, rgba(255,255,255,.004), rgba(255,255,255,.1));
-    cursor: pointer;
     border: none;
     border-radius: 0 0 0 25px;
     transition: transform .5s;
@@ -95,11 +94,6 @@ export const Image = styled.img`
         width: 400px;
         
     }
-    &:hover{
-        transform: scale(1.1);
-    }
-    
-    
 `
 export const Button = styled.a`
     margin: 0;

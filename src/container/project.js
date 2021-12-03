@@ -52,7 +52,7 @@ export function ProjectContainer(){
                index === displayProject &&
                
                 <Project.Inner  key={index} image = {process.env.PUBLIC_URL + project.image}>
-                    <Project.Image src = {process.env.PUBLIC_URL + project.image}/>
+                    <Project.Image onClick={()=> window.open("https://www.google.com", "_blank")} src = {process.env.PUBLIC_URL + project.image}/>
                     <Project.Group>
                         <Project.Title>{project.title}</Project.Title>
                         <Project.Wrapper>
