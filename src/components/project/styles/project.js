@@ -16,8 +16,8 @@ export const Container = styled.section`
 `
 
 const slide = keyframes`
-    0%{ left: 25em}
-    100%{ left: 0; }
+    0%{ top: 50em}
+    100%{ top: 0; }
 `
 
 export const Inner = styled.div`
@@ -46,7 +46,7 @@ export const Group = styled.div`
     background: linear-gradient(225deg, rgba(0,0,0,1) ,rgba(0,0,0,.75));
     position: relative;
     overflow: hidden;
-    animation: ${slide} .8s forwards;
+    animation: ${slide} 1s forwards;
     @media(min-width: 700px){
         padding: 2em;
     }
@@ -88,7 +88,7 @@ export const Image = styled.img`
     transition: transform .5s;
     position: relative;
     overflow: hidden;
-    animation: ${slide} .8s forwards;
+    animation: ${slide} 1s forwards;
 
     @media(min-width: 700px){
         width: 400px;
