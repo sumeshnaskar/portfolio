@@ -1,10 +1,23 @@
 import React from 'react'
-import { Loading } from '../components'
+import { Loading, Header } from '../components'
 
 export function LoadingContainer(){
     return(
         <Loading>
-            <Loading.Circle></Loading.Circle>
+            <Header.Logo
+                style = {{
+                    transform: "scale(1.85)",
+                    cursor: "auto",
+                    margin: '0',
+                    padding: '0',
+                    marginBottom: '3em',
+                    animation: 'none'
+
+                }}
+            >
+                 Portfolio
+            </Header.Logo>
+            <Loading.Circle/>
         </Loading>
     )
 }

@@ -6,25 +6,26 @@ export const Container = styled.section`
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `
 
 const loading = keyframes`
-    0%{ transform: scale(.5, .5);}
-    50%{ transform: scale(1, 1);}
-    100%{ transform: scale(.5, .5);}
+    0%{ transform: scale(.5, .5); outline: rgba(255,255,255,.01) solid 20px;}
+    50%{ transform: scale(1, 1); outline: rgba(255,255,255,.05) solid 20px;}
+    100%{ transform: scale(.5, .5); outline: rgba(255,255,255,.1) solid 20px;}
 `
 
 export const Circle = styled.p`
     margin: 0;
-    paadding: 0px
+    padding: 0px
     color: white;
-    border: 5px solid rgba(255,255,255,.4);
+    border: 5px solid rgba(255,255,255,1);
     width: 75px;
     height: 75px;
     margin: 0 auto;
-    border-radius: 50px;
-    outline: rgba(255,255,255,.1) solid 20px;
-    animation: ${loading} 1.5s infinite cubic-bezier(.1, .11, .89, .32);
+    -webkit-border-radius: 50px;
+    outline: rgba(255,255,255,.09) solid 20px;
+    animation: ${loading} 1s infinite cubic-bezier(.1, .11, .89, .32);
 `

@@ -15,7 +15,12 @@ export function FooterContainer(){
                     // onMouseOut = {() => setText('....')}
                     src = {process.env.PUBLIC_URL + '/images/gmail.png'}/>
             </a>
-            <Footer.Image src = {process.env.PUBLIC_URL + '/images/linkedin.png'}/>
+            <a href="https://www.linkedin.com/in/sumeshnaskar/">
+                <Footer.Image 
+                    onMouseOver = {() => setText('sumeshnaskar')} 
+                    src = {process.env.PUBLIC_URL + '/images/linkedin.png'}
+                />
+            </a>
             <Footer.Image 
                 onMouseOver = {() => setText('github.com/sumeshnaskar')} 
                 // onMouseOut = {() => setText('....')}
