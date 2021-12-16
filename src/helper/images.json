@@ -1,5 +1,12 @@
 [
     {
+    "title": "Netflix-Clone",
+    "description": "This is project description.",
+    "image": "/images/netflix-clone-image.png",
+    "live": "https://sumeshnaskar.github.io/netflix-clone/",
+    "github": "https://github.com/sumeshnaskar/netflix-clone"
+    },
+    {
         "title": "Ecommerce",
         "description": "This is project description.",
         "image": "/images/ecommerce-image.png",
@@ -13,13 +20,7 @@
         "live": "https://sumeshnaskar.github.io/shorturl",
         "github": "https://github.com/sumeshnaskar/shorturl"
     },
-    {
-        "title": "Netflix-Clone",
-        "description": "This is project description.",
-        "image": "/images/netflix-clone-image.png",
-        "live": "https://sumeshnaskar.github.io/netflix-clone/",
-        "github": "https://github.com/sumeshnaskar/netflix-clone"
-    },
+    
     {
         "title": "Rock Paper Scissors",
         "description": "This is project description.",

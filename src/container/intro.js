@@ -6,7 +6,7 @@ export function IntroContainer(){
     return(
         <Intro>
             <Element id='top'/>
-            <Intro.Title>Hi! I am Sumesh Naskar</Intro.Title>
+            <Intro.Title>Hire... Collab.. Connect.</Intro.Title>
             <Intro.Text>Front-end Developer</Intro.Text>
             <Intro.Button>Resumé</Intro.Button>
             <Element id='project'/>

@@ -15,25 +15,41 @@ export const Container = styled.section`
     
 `
 
-const slide = keyframes`
+const slideUp = keyframes`
     0%{ top: 50em}
     100%{ top: 0; }
 `
+const slideDown = keyframes`
+    0%{ bottom: 50em}
+    100%{ bottom: 0; }
+`
+
+const slideLeft = keyframes`
+    0%{ left: 90em}
+    100%{ left: 0; }
+`
+
+const slideRight = keyframes`
+    0%{ right: 90em}
+    100%{ right: 0; }
+`
 
 export const Inner = styled.div`
-
     box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 2px;
     display: flex;
     flex-direction: column-reverse; 
     background-image: url(${({image}) => image}), linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0));
     background-blend-mode: overlay;
     background-size: cover;
+    object-fit: contain;
+    object-position:  center;
     border-radius: 0 25px 0 25px;
     position: relative;
     overflow: hidden;
     left: 0;
     right: 0;
     border: 5px solid #fff;
+    
     @media(min-width: 700px){
         flex-direction: row;
     }
@@ -46,9 +62,11 @@ export const Group = styled.div`
     background: linear-gradient(225deg, rgba(0,0,0,1) ,rgba(0,0,0,.75));
     position: relative;
     overflow: hidden;
-    animation: ${slide} 1s forwards;
+    animation: ${slideUp} 2s forwards;
+    
     @media(min-width: 700px){
         padding: 2em;
+        animation: ${slideRight} 2s forwards;
     }
 `
 export const Title = styled.h2`
@@ -88,11 +106,10 @@ export const Image = styled.img`
     transition: transform .5s;
     position: relative;
     overflow: hidden;
-    animation: ${slide} 1s forwards;
+    animation: ${slideDown} 2s forwards;
 
     @media(min-width: 700px){
-        width: 400px;
-        
+        animation: ${slideLeft} 2s forwards;
     }
 `
 export const Button = styled.a`

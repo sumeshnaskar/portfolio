@@ -9,11 +9,13 @@ const style = {
 
 export function ProjectContainer(){
     const [ displayProject, setDisplayProject ] = useState(0)
+    const [ displayFirst, setDisplayFirst ] = useState(false)
     let focusRef = useRef()
 
     useEffect(() => {
-        if (displayProject) {
+        if (displayProject || displayFirst) {
             focusRef.current.focus()
+            setDisplayFirst(!displayFirst)
         }
       }, [displayProject])
 
@@ -22,7 +24,10 @@ export function ProjectContainer(){
             <Project.Wrapper style = {{justifyContent: "flex-end"}}>
                 {displayProject > 0 &&
                 <Project.Button 
-                    onClick = { () => setDisplayProject(displayProject - 1)} 
+                    onClick = { () => {
+                        setDisplayProject(displayProject - 1)
+                        if (displayProject === 0){ setDisplayFirst(!displayFirst) }
+                        }} 
                     style = {style}
                 >
                     Prev
