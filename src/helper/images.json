@@ -4,21 +4,25 @@
     "description": "This is project description.",
     "image": "/images/netflix-clone-image.png",
     "live": "https://sumeshnaskar.github.io/netflix-clone/",
-    "github": "https://github.com/sumeshnaskar/netflix-clone"
+    "github": "https://github.com/sumeshnaskar/netflix-clone",
+    "feature": ["React", "React-router", "Compound components", "styled-components", "hooks", "Context Provider",
+                "Firebase", "gh-pages"]
     },
     {
         "title": "Ecommerce",
         "description": "This is project description.",
         "image": "/images/ecommerce-image.png",
         "live": "https://sumeshnaskar.github.io/ecommerce",
-        "github": "https://github.com/sumeshnaskar/ecommerce"
+        "github": "https://github.com/sumeshnaskar/ecommerce",
+        "feature": ["React", "Compound components", "styled-components", "hooks", "gh-pages"]
     },
     {
         "title": "Shortly",
         "description": "This is project description.",
         "image": "/images/shorturl-image.png",
         "live": "https://sumeshnaskar.github.io/shorturl",
-        "github": "https://github.com/sumeshnaskar/shorturl"
+        "github": "https://github.com/sumeshnaskar/shorturl",
+        "feature": ["React", "Compound components", "styled-components", "hooks", "Context Provider", "gh-pages"]
     },
     
     {
@@ -26,14 +30,16 @@
         "description": "This is project description.",
         "image": "/images/rock-paper-scissors-image.png",
         "live": "https://sumeshnaskar.github.io/rock-paper-scissors/",
-        "github": "https://github.com/sumeshnaskar/rock-paper-scissors"
+        "github": "https://github.com/sumeshnaskar/rock-paper-scissors",
+        "feature": ["React", "Compound components", "styled-components", "hooks", "Redux", "gh-pages"]
     },
     {
         "title": "Tic Tac Toe",
         "description": "This is project description.",
         "image": "/images/tic-tac-toe-image.png",
         "live": "https://sumeshnaskar.github.io/tic-tac-toe-with-react-hooks",
-        "github": "https://github.com/sumeshnaskar/tic-tac-toe-with-react-hooks"
+        "github": "https://github.com/sumeshnaskar/tic-tac-toe-with-react-hooks",
+        "feature": ["React", "Compound components", "styled-components", "hooks", "Context Provider", "gh-pages"]
     }
 
 ]

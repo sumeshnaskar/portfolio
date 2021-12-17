@@ -63,9 +63,14 @@ export function ProjectContainer(){
                             <Project.Button href = {project.live}>Live</Project.Button>
                             <Project.Button href = {project.github}>Github</Project.Button>
                         </Project.Wrapper>
-                        <Project.Description>
+                        {project.feature.map( (feature, index) => (
+                            <Project.Description key={index}>
+                                {feature}
+                            </Project.Description> 
+                        ))}
+                        <Project.Note>
                             {project.description}
-                        </Project.Description>     
+                        </Project.Note>     
                     </Project.Group>   
                 </Project.Inner>  
            ))}
