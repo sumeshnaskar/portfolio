@@ -1,11 +1,11 @@
 import React, {useState} from "react"
-import { Footer,Intro } from "../components"
+import { Footer } from "../components"
 
 export function FooterContainer(){
     const [text, setText] = useState('....')
     return(
         <>
-        <Intro.Text>Contact</Intro.Text>
+        <Footer.Title>Contact</Footer.Title>
         <Footer.Text>For any relevant job updates or collaboration, feel free to reach out to me via</Footer.Text>
         <Footer.Text style={{color: '#00cc99'}}>{text}</Footer.Text>
         <Footer>

@@ -1,4 +1,4 @@
-import styled, {keyframes} from "styled-components"
+import styled from "styled-components"
 
 
 //Header container fixed on top
@@ -19,10 +19,7 @@ export const Container = styled.nav`
         
     }
 `
-const load = keyframes`
-    0%{ transform: scale(0, 0); opacity: 0}
-    100%{ transform: scale(1, 1); opacity: 1}
-`
+
 //Logo 
 export const LogoWrapper = styled.div`  
     text-transform: uppercase;

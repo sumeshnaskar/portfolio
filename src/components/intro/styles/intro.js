@@ -42,7 +42,7 @@ export const Title = styled.h1`
 
 `
 
-export const Text = styled.p`
+export const Text = styled.a`
     margin: 0 auto;
     text-align: center;
     margin-top: 0;
@@ -88,6 +88,7 @@ export const Arrow = styled.div`
 export const Button = styled(Text)`
     background: #FF0000;
     cursor: pointer;
+    text-decoration: none;
     transition: transform .3s;
     animation: ${revload} .5s ease-in;
     &:hover{
