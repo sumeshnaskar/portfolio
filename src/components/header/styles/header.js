@@ -11,7 +11,7 @@ export const Container = styled.nav`
     right: 0;
     width: 100%;
     margin: 0 auto;
-    background-color: rgba(17, 17, 17, .5);
+    background-color: rgba(17, 17, 17, .9);
     
     @media(min-width: 700px){
         width: 95%;
@@ -23,16 +23,24 @@ export const Container = styled.nav`
 //Logo 
 export const LogoWrapper = styled.div`  
     text-transform: uppercase;
-    color: #333;
-    background: #fff;
+
     padding: 0.5em;
     letter-spacing: 5px;
     user-select: none;
     font-size: 1.2rem;
     font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s;
+    background: linear-gradient(90deg, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
     
     @media(min-width: 500px){
         margin-right: 1em;
+    }
+
+    &:hover{
+        transform: scale(1.25);
     }
 `
 
@@ -51,12 +59,13 @@ export const Group = styled.div`
 //Text below logo
 export const Text = styled.p`
     margin: 0;
-    padding: .5em 0;
+    padding: 0;
     font-size: .85rem;
     letter-spacing: 3.9px;
     color: #fff;
     opacity: .3;
     user-select: none;
+
 `
 
 export const Wrapper = styled.div`
@@ -155,6 +164,7 @@ export const Item = styled.li`
         letter-spacing: 3px;
         display: block;
         font-weight: 700;
+        transition: transform .2s;
         
         &:last-of-type{
             margin-right: 0;
@@ -166,6 +176,7 @@ export const Item = styled.li`
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; 
             font-weight: 700;
+            transform: scale(1.5);
         }
     }
 

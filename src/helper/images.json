@@ -1,28 +1,45 @@
 [
     {
+    "title": "Netflix-Clone",
+    "description": "Netflix clone is what the name says but with limited functionalities. Although the signup feature is functional, I would appreciate it if you Sign in using user@user.com as an email address and user@user as the password to avoid populating data in firebase. There are films and series to choose from on sign in and all of them plays the same video. There is also an option to search that is series and film specific.",
+    "image": "/images/netflix-clone-image.png",
+    "live": "https://sumeshnaskar.github.io/netflix-clone/",
+    "github": "https://github.com/sumeshnaskar/netflix-clone",
+    "feature": ["React", "React-router", "Compound components", "styled-components", "hooks", "Context Provider",
+                "Firebase", "gh-pages"]
+    },
+    {
         "title": "Ecommerce",
-        "description": "This is project description.",
-        "image": "images/ecommerce-image.png"
+        "description": "This project is focused more on a responsive website design with a mobile-first approach. I suggest trying this website on small and big devices to find the difference. To point out a few functionalities, everything around the image is functional. (Try clicking on the image to enlarge it further specific to the big screen only) Add to cart and delete are also supported.",
+        "image": "/images/ecommerce-image.png",
+        "live": "https://sumeshnaskar.github.io/ecommerce",
+        "github": "https://github.com/sumeshnaskar/ecommerce",
+        "feature": ["React", "Compound components", "styled-components", "hooks", "gh-pages"]
     },
     {
         "title": "Shortly",
-        "description": "This is project description.",
-        "image": "images/shorturl-image.png"
+        "description": "URL shortening landing page integrated with the shrtcode API to create shortened URLs and display them. The last three shortened links are displayed even after refreshing the browser. It is also a responsive website design with a mobile-first approach.",
+        "image": "/images/shorturl-image.png",
+        "live": "https://sumeshnaskar.github.io/shorturl",
+        "github": "https://github.com/sumeshnaskar/shorturl",
+        "feature": ["React", "Compound components", "styled-components", "hooks", "Context Provider", "gh-pages"]
     },
-    {
-        "title": "Netflix-Clone",
-        "description": "This is project description.",
-        "image": "images/netflix-clone-image.png"
-    },
+    
     {
         "title": "Rock Paper Scissors",
-        "description": "This is project description.",
-        "image": "images/rock-paper-scissors-image.png"
+        "description": "A built-in bot to play as many rounds of rock paper scissors as you want. I enjoyed making this game.",
+        "image": "/images/rock-paper-scissors-image.png",
+        "live": "https://sumeshnaskar.github.io/rock-paper-scissors/",
+        "github": "https://github.com/sumeshnaskar/rock-paper-scissors",
+        "feature": ["React", "Compound components", "styled-components", "hooks", "Redux", "gh-pages"]
     },
     {
         "title": "Tic Tac Toe",
-        "description": "This is project description.",
-        "image": "images/tic-tac-toe-image.png"
+        "description": "Two-player game tic tac toe. Player turn and winner will be at the top. Start the game any time you want and undo any number of times.",
+        "image": "/images/tic-tac-toe-image.png",
+        "live": "https://sumeshnaskar.github.io/tic-tac-toe-with-react-hooks",
+        "github": "https://github.com/sumeshnaskar/tic-tac-toe-with-react-hooks",
+        "feature": ["React", "Compound components", "styled-components", "hooks", "Context Provider", "gh-pages"]
     }
 
 ]

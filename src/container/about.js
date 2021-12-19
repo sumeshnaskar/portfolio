@@ -1,15 +1,20 @@
 import React from 'react'
-import { About } from '../components'
+import { Element } from 'react-scroll'
+import { About, Intro } from '../components'
 
 export function AboutContainer(){
     return (
         <About>
             <About.Text>
-                Hi! I am a software engineer with 2+ years of experience which I started with 
-                the backend and later followed the HTML, CSS, and JS tradition before switching to React, 
-                and since then, I have been looking for ways to showcase my abilities. 
-                The projects in my portfolio and this website are all created using React. 
+            Hi! I'm Sumesh Naskar a meticulous web developer with over 2 years of experience having passion for responsive 
+            website design and a firm believer in the mobile-first approach. Experienced working with 
+            teams to produce impactful, leading-edge websites that engage customers and deliver business results. 
+            Well-versed in design standards and user preferences. Want to hire, collab or connect? Find my contact below.
             </About.Text>
+            <Element id='contact'/>
+            <Intro.Arrow/>
+            {/* <Intro.Text style ={{ color: "#111"}}>Contact</Intro.Text> */}
+            {/* <About.Text>sumeshnaskar27@gmail.com</About.Text> */}
         </About>
     )
 }

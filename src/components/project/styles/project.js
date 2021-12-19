@@ -10,13 +10,28 @@ export const Container = styled.section`
     @media(min-width: 700px){
         padding: 4em;
         padding-bottom: 0;
+        padding-top: 0;
     }
     
 `
 
-const slide = keyframes`
-    0%{ left: 25em}
+const slideUp = keyframes`
+    0%{ top: 50em}
+    100%{ top: 0; }
+`
+const slideDown = keyframes`
+    0%{ bottom: 50em}
+    100%{ bottom: 0; }
+`
+
+const slideLeft = keyframes`
+    0%{ left: 90em}
     100%{ left: 0; }
+`
+
+const slideRight = keyframes`
+    0%{ right: 90em}
+    100%{ right: 0; }
 `
 
 export const Inner = styled.div`
@@ -26,12 +41,16 @@ export const Inner = styled.div`
     background-image: url(${({image}) => image}), linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0));
     background-blend-mode: overlay;
     background-size: cover;
+    object-fit: contain;
+    object-position:  center;
     border-radius: 0 25px 0 25px;
     position: relative;
     overflow: hidden;
     left: 0;
     right: 0;
-
+    border: 5px solid #fff;
+    
+    
     @media(min-width: 700px){
         flex-direction: row;
     }
@@ -44,9 +63,11 @@ export const Group = styled.div`
     background: linear-gradient(225deg, rgba(0,0,0,1) ,rgba(0,0,0,.75));
     position: relative;
     overflow: hidden;
-    animation: ${slide} .8s forwards;
+    animation: ${slideUp} 2s forwards;
+    
     @media(min-width: 700px){
         padding: 2em;
+        animation: ${slideRight} 2s forwards;
     }
 `
 export const Title = styled.h2`
@@ -56,6 +77,9 @@ export const Title = styled.h2`
     letter-spacing: 1px;
     color: #fff;
     font-weight: 700;
+    background: linear-gradient(135deg, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 
     @media(min-width: 700px){
         text-align: left;
@@ -63,56 +87,73 @@ export const Title = styled.h2`
     }
 `
 export const Description = styled.p`
-    font-size: 1rem;
-    margin: .5em 0 .25em;
-    text-align: center;
+    font-size: .8rem;
+    margin: .5em .5em .25em;
+    text-align: left;
     letter-spacing: 1px;
-    color: #fff;
+    color: #111;
     font-weight: 700;
-
+    display: inline-block;
+    background-color: #fff;
+    padding: .2em .75em;
+    border-radius: 3px;
     @media(min-width: 700px){
         text-align: left;
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+`
+
+export const Note = styled(Description)`
+    font-size: 1rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    letter-spacing: 1.8px;
+    line-height: 1.6;
+    font-weight: 400;
+    @media(min-width: 700px){
+        text-align: left;
+        font-size: 1.2rem;
+        letter-spacing: 2.25px;
     }
 `
 
 export const Image = styled.img`
     max-width: 100%;
-    object-fit: cover;
-    object-position:  top;
-    background: linear-gradient(45deg, rgba(255,255,255,.004), rgba(255,255,255,.1));
-    cursor: pointer;
+    object-fit: scale-down;
+    object-position:  0% 50%;
+    background: linear-gradient(270deg, rgba(0,0,0,.75) ,rgba(0,0,0,.75));
     border: none;
     border-radius: 0 0 0 25px;
     transition: transform .5s;
     position: relative;
     overflow: hidden;
-    animation: ${slide} .8s forwards;
+    animation: ${slideDown} 2s forwards;
 
     @media(min-width: 700px){
-        width: 400px;
+        animation: ${slideLeft} 2s forwards;
         
     }
-    &:hover{
-        transform: scale(1.1);
-    }
-    
-    
 `
-export const Button = styled.button`
+export const Button = styled.a`
     margin: 0;
     border: 0;
-    padding: .75em 1.25em;
+    padding: .5em 1em;
     display: inline-block;
     font-weight: 700;
     font-size: .75rem;
-    color: #111;
+    color: #fff;
     cursor: pointer;
-    background-color: #fff;
+    background-color: red;
     margin: .5em 0;
     align-self: center;
     letter-spacing: 1px;
     border-radius: 50px;
+    text-decoration: none;
+    
+    
     
     &: last-of-type{
         margin-left: .5em;

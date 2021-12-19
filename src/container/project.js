@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
-
+import { Element } from 'react-scroll'
 import { Project,Intro } from '../components'
 import projectData  from '../helper/images.json'
 
@@ -9,11 +9,13 @@ const style = {
 
 export function ProjectContainer(){
     const [ displayProject, setDisplayProject ] = useState(0)
+    const [ displayFirst, setDisplayFirst ] = useState(false)
     let focusRef = useRef()
 
     useEffect(() => {
-        if (displayProject) {
+        if (displayProject || displayFirst) {
             focusRef.current.focus()
+            setDisplayFirst(!displayFirst)
         }
       }, [displayProject])
 
@@ -22,7 +24,10 @@ export function ProjectContainer(){
             <Project.Wrapper style = {{justifyContent: "flex-end"}}>
                 {displayProject > 0 &&
                 <Project.Button 
-                    onClick = { () => setDisplayProject(displayProject - 1)} 
+                    onClick = { () => {
+                        setDisplayProject(displayProject - 1)
+                        if (displayProject === 0){ setDisplayFirst(!displayFirst) }
+                        }} 
                     style = {style}
                 >
                     Prev
@@ -49,19 +54,23 @@ export function ProjectContainer(){
                     ref={focusRef}
             />
            {projectData.map( (project, index) => (
-               index === displayProject &&
-               
+               index === displayProject &&             
                 <Project.Inner  key={index} image = {process.env.PUBLIC_URL + project.image}>
                     <Project.Image src = {process.env.PUBLIC_URL + project.image}/>
                     <Project.Group>
                         <Project.Title>{project.title}</Project.Title>
                         <Project.Wrapper>
-                            <Project.Button>Live</Project.Button>
-                            <Project.Button>Github</Project.Button>
+                            <Project.Button href = {project.live}>Live</Project.Button>
+                            <Project.Button href = {project.github}>Github</Project.Button>
                         </Project.Wrapper>
-                        <Project.Description>
+                        {project.feature.map( (feature, index) => (
+                            <Project.Description key={index}>
+                                {feature}
+                            </Project.Description> 
+                        ))}
+                        <Project.Note>
                             {project.description}
-                        </Project.Description>     
+                        </Project.Note>     
                     </Project.Group>   
                 </Project.Inner>  
            ))}
@@ -81,6 +90,7 @@ export function ProjectContainer(){
                     Next
                 </Project.Button> }              
             </Project.Wrapper> 
+            <Element id='about'/>
             <Intro.Arrow/>
             <Intro.Text style ={{ color: "#111"}}>About</Intro.Text>
         </Project>

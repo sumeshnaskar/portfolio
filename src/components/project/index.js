@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Image, Title, Description, Button, Group, Inner, Wrapper } from './styles/project'
+import { Container, Image, Title, Description, Button, Group, Inner, Wrapper, Note } from './styles/project'
 
 export default function Project({ children, ...restProps }){
     return <Container {...restProps}>{children}</Container>
@@ -20,6 +20,10 @@ Project.Title = function ProjectTitle({ children, ...restProps }){
 
 Project.Description = function ProjectDescription({ children, ...restProps }){
     return <Description {...restProps}>{children}</Description>
+}
+
+Project.Note = function ProjectNote({ children, ...restProps }){
+    return <Note {...restProps}>{children}</Note>
 }
 
 Project.Button = function ProjectButton({ children, ...restProps }){

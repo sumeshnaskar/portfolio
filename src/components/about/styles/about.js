@@ -3,10 +3,10 @@ import styled from "styled-components"
 export const Container = styled.section`
     margin: 0;
     background: #fff;
-    border: 0;
-    outline: 0;
-    margin-top: -.1em;
+    display:flex;
+    flex-direction: column;
     min-width: 280px;
+    margin-top: -.1em;
 
 `
 export const Text = styled.p`
@@ -23,5 +23,6 @@ export const Text = styled.p`
         max-width: 80%;
         margin: 0 auto;
         font-size: 1.25rem;
+        margin-bottom: 2em;
     }
 `
