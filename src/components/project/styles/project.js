@@ -122,9 +122,9 @@ export const Note = styled(Description)`
 
 export const Image = styled.img`
     max-width: 100%;
-    object-fit: cover;
-    object-position:  top;
-    background: linear-gradient(45deg, rgba(255,255,255,.004), rgba(255,255,255,.1));
+    object-fit: scale-down;
+    object-position:  0% 50%;
+    background: linear-gradient(270deg, rgba(0,0,0,.75) ,rgba(0,0,0,.75));
     border: none;
     border-radius: 0 0 0 25px;
     transition: transform .5s;
@@ -134,6 +134,7 @@ export const Image = styled.img`
 
     @media(min-width: 700px){
         animation: ${slideLeft} 2s forwards;
+        
     }
 `
 export const Button = styled.a`
