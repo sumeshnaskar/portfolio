@@ -9,7 +9,7 @@ export function IntroContainer(){
             <Intro.Title>Hire... Collab.. Connect.</Intro.Title>
             <Intro.Text>Front-end Developer</Intro.Text>
             
-                <Intro.Button href={process.env.PUBLIC_URL + "Resume.pdf"} download="Resume">Resumé</Intro.Button>
+                <Intro.Button href={process.env.PUBLIC_URL + "/Resume.pdf"} download="Resume">Resumé</Intro.Button>
             
             <Element id='project'/>
             <Intro.Arrow/>
