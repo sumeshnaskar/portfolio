@@ -137,7 +137,37 @@ export const Image = styled.img`
         
     }
 `
-export const Button = styled.a`
+export const Button = styled.button`
+    margin: 0;
+    padding: .5em 1em;
+    display: inline-block;
+    font-weight: 700;
+    font-size: .75rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #111;
+    margin: .5em 0;
+    align-self: center;
+    letter-spacing: 1px;
+    border-radius: 0;
+    border: 1.5px solid #fff;
+  
+    &: last-of-type{
+        margin-left: .5em;
+        
+    }
+    
+    &:hover{
+        opacity: .3;
+        
+    }
+
+    @media(min-width: 700px){
+        font-size: 1.25rem;
+    }
+`
+
+export const ButtonExt = styled.a`
     margin: 0;
     border: 0;
     padding: .5em 1em;
@@ -152,17 +182,13 @@ export const Button = styled.a`
     letter-spacing: 1px;
     border-radius: 50px;
     text-decoration: none;
-    
-    
-    
+
     &: last-of-type{
         margin-left: .5em;
-        
     }
-    
+
     &:hover{
         opacity: .3;
-        
     }
 
     @media(min-width: 700px){
