@@ -15,8 +15,6 @@ export function AboutContainer(){
             </About.Text>
             <Element id='contact'/>
             <Intro.Arrow/>
-            {/* <Intro.Text style ={{ color: "#111"}}>Contact</Intro.Text> */}
-            {/* <About.Text>sumeshnaskar27@gmail.com</About.Text> */}
         </About>
     )
 }

@@ -1,5 +1,16 @@
 import React from 'react'
-import { Container, Image, Title, Description, Button, Group, Inner, Wrapper, Note, ButtonExt } from './styles/project'
+import { 
+    Container, 
+    Image, 
+    Title, 
+    Description, 
+    Button, 
+    Group, 
+    Inner, 
+    Wrapper, 
+    Note, 
+    ButtonExt 
+} from './styles/project'
 
 export default function Project({ children, ...restProps }){
     return <Container {...restProps}>{children}</Container>
